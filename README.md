@@ -31,17 +31,17 @@ Construire un petit programme Python qui modélise un réseau de villes reliées
 ---
 
 ## Arborescence suggérée
-/mon-reseau-villes
-├── README.md
-├── src/
-│   ├── city.py
-│   ├── graph.py
-│   ├── stack.py
-│   ├── queue.py
-│   └── searches.py   # dfs / bfs (interfaces)
-├── tests/
-│   ├── test_graph.py
-│   └── test_searches.py
-├── examples/
-│   └── demo_cli.md
-└── requirements.txt
+    /mon-reseau-villes
+    ├── README.md
+    ├── src/
+    │   ├── city.py
+    │   ├── graph.py
+    │   ├── stack.py
+    │   ├── queue.py
+    │   └── searches.py   # dfs / bfs (interfaces)
+    ├── tests/
+    │   ├── test_graph.py
+    │   └── test_searches.py
+    ├── examples/
+    │   └── demo_cli.md
+    └── requirements.txt
