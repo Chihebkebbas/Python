@@ -42,6 +42,5 @@ Construire un petit programme Python qui modélise un réseau de villes reliées
     ├── tests/
     │   ├── test_graph.py
     │   └── test_searches.py
-    ├── examples/
-    │   └── demo_cli.md
-    └── requirements.txt
+    └── examples/
+        └── demo_cli.md
