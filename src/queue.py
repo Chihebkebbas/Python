@@ -10,7 +10,7 @@ class Queue:
 
     def dequeue(self):
         if not self.is_empty():
-            self.items.pop(0)
+            return self.items.pop(0)
         else:
             raise IndexError("Dequeue from empty queue")
 
@@ -18,7 +18,7 @@ class Queue:
         if not self.is_empty():
             return self.items[0]
         else:
-            raise IndexError("peek from empty queue")
+            raise IndexError("Peek from empty queue")
 
     def size(self) -> int:
         return len(self.items)

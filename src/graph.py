@@ -4,9 +4,9 @@ from src.city import City
 
 
 class Graph:
-    def __init__(self, directed: bool, cities: Dict[str, City]):
+    def __init__(self, directed: bool, cities: Dict[str, City] = None): # = None veut dire que cities c'est pas un argument obligatoire
         self.directed = directed
-        self.cities: Dict[str, City] = cities
+        self.cities: Dict[str, City] = cities if cities is not None else {}
 
     def add_city(self, name: str) -> None:
         if name not in self.cities:
@@ -17,6 +17,8 @@ class Graph:
 
     def remove_city(self, name: str) -> None:
         if name in self.cities:
+            for city in self.cities.values():
+                city.remove_neighbor(name)
             del self.cities[name]
 
     def add_road(self, from_city: str, to_city: str) -> None:
@@ -32,10 +34,13 @@ class Graph:
                 self.cities[to_city].remove_neighbor(from_city)
 
     def neighbors(self, name: str) -> Set[str]:
-        return self.cities[name].neighbor
+        if name not in self.cities:
+            ValueError(f"City '{name}' not found")
+        return self.cities[name].neighbors
+
 
     def get_cities(self) -> Dict[str, City]:
-        return self.cities
+        return dict(self.cities)
 
     def __repr__(self) -> str:
         return f"Graph(directed={self.directed}, cities={self.cities})"
