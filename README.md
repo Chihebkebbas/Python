@@ -4,7 +4,7 @@
 Construire un petit programme Python qui modélise un réseau de villes reliées par des routes et permet de :
 - représenter les villes et les connexions (**POO**),
 - manipuler explicitement une **pile** et une **file**,
-- implémenter **DFS** (profondeur) et **BFS** (largeur) pour savoir si une ville A est atteignable depuis B, et *(optionnel)* retourner le chemin.
+- implémenter **DFS** (profondeur) et **BFS** (largeur) pour savoir si une ville A est atteignable depuis B, et retourner le chemin.
 
 ---
 
